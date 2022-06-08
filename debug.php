@@ -1,5 +1,5 @@
 <?php
-require('kugeci.php');
+require('src/kuSource.php');
 
 class AudioStationResult {
     private $items;
@@ -8,12 +8,10 @@ class AudioStationResult {
     }
 
     public function addTrackInfoToList($artist, $title, $id, $partialLyric) {
-        printf('<br />');
-        printf('artist = %s\n', $artist);
-        printf('title = %s\n', $title);
-        printf('id = %s\n', $id);
-        printf('partialLyric = %s\n', $partialLyric);
-        printf('<br />');
+        printf("\nartist = %s\n", $artist);
+        printf("title = %s\n", $title);
+        printf("id = %s\n", $id);
+        printf("partialLyric = %s\n\n", $partialLyric);
 
         array_push($this->items, array(
             'artist' => $artist,
@@ -24,13 +22,11 @@ class AudioStationResult {
     }
 
     public function addLyrics($lyric, $id) {
-        printf('<br />');
-        printf('song id: %s\n', $id);
-        printf('song lyric:\n');
-        printf('***** BEGIN OF LYRIC *****\n');
-        printf('%s\n', $lyric);
-        printf('***** END OF LYRIC *****\n');
-        printf('<br />');
+        printf("\nsong id: %s\n", $id);
+        printf("song lyric:\n");
+        printf("***** BEGIN OF LYRIC *****\n");
+        printf("%s\n", $lyric);
+        printf("***** END OF LYRIC *****\n\n");
     }
 
     public function getFirstItem() {
@@ -44,13 +40,13 @@ class AudioStationResult {
 $title = '谢谢你的爱';
 $artist = '刘德华';
 
-echo '测试开始...<br />变量:<$title="谢谢你的爱"; $artist="刘德华"><br />';
+echo "测试开始...\n变量:<title = $title; artist = $artist>\n";
 $testObj = new AudioStationResult();
-$downloader = (new ReflectionClass('Kugeci'))->newInstance();
+$downloader = (new ReflectionClass('AumKuSource'))->newInstance();
 $count = $downloader->getLyricsList($artist, $title, $testObj);
 if ($count > 0) {
     $item = $testObj->getFirstItem();
     $downloader->getLyrics($item['id'], $testObj);
 } else {
-    echo '<br />没有查找的任何歌词！<br />';
+    echo "\n没有查找到任何歌词！\n";
 }

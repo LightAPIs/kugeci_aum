@@ -2,8 +2,8 @@
   "name": "kugeci",
   "displayname": "酷歌词",
   "description": "www.kugeci.com",
-  "version": "1.0",
-  "module": "kugeci.php",
+  "version": "1.1",
+  "module": "kuSource.php",
   "type": "lyric",
-  "class": "Kugeci"
+  "class": "AumKuSource"
 }
