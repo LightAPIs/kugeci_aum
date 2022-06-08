@@ -17,3 +17,7 @@
 ## 相关项目
 
 部分代码来自 Audio Station 网易歌词插件项目：[LudySu/Synology-LrcPlugin](https://github.com/LudySu/Synology-LrcPlugin)([Apache-2.0 license](https://github.com/LudySu/Synology-LrcPlugin/blob/master/LICENSE))
+
+## 其他歌词插件
+
+- [LightAPIs/qq_music_aum](https://github.com/LightAPIs/qq_music_aum)
