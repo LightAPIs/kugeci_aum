@@ -16,8 +16,10 @@
 
 ## 相关项目
 
-部分代码来自 Audio Station 网易歌词插件项目：[LudySu/Synology-LrcPlugin](https://github.com/LudySu/Synology-LrcPlugin)([Apache-2.0 license](https://github.com/LudySu/Synology-LrcPlugin/blob/master/LICENSE))
+- 部分代码来自 Audio Station 网易歌词插件项目：[LudySu/Synology-LrcPlugin](https://github.com/LudySu/Synology-LrcPlugin)([Apache-2.0 license](https://github.com/LudySu/Synology-LrcPlugin/blob/master/LICENSE))
+- DOM API 来自: [phpQuery](https://code.google.com/archive/p/phpquery/)([MIT License](http://www.opensource.org/licenses/mit-license.php))
 
 ## 其他歌词插件
 
+- [LightAPIs/followlyrics_aum](https://github.com/LightAPIs/followlyrics_aum)
 - [LightAPIs/qq_music_aum](https://github.com/LightAPIs/qq_music_aum)
