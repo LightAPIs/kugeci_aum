@@ -63,7 +63,7 @@ class AumKuSource {
             return false;
         }
 
-        $info->addLyrics($lyric, $id);
+        $info->addLyrics($this->decodeHtmlSpecialChars($lyric), $id);
         return true;
     }
 
@@ -97,6 +97,10 @@ class AumKuSource {
             }
         }
         return $foundArray;
+    }
+
+    private function decodeHtmlSpecialChars($str) {
+        return htmlspecialchars_decode($str, ENT_QUOTES | ENT_HTML5);
     }
 }
 
