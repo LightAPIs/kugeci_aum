@@ -25,9 +25,9 @@ class AumKuHandler {
         return $result === false ? '' : $result;
     }
 
-    public static function search($word) {
+    public static function search($title, $artist) {
         $results = array();
-        $url = AumKuHandler::$siteSearch . urlencode($word);
+        $url = AumKuHandler::$siteSearch . urlencode($title);
         $items = phpQuery::newDocument(AumKuHandler::getContent($url))->find('#tablesort tbody tr');
         foreach($items as $ele) {
             $song = '';
