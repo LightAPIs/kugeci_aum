@@ -106,8 +106,8 @@ class AumKuSource {
     private function getCleanStr($str) {
         $lowStr = strtolower($str);
         return str_replace(
-            array(" ", "，", "：", "；", "！", "？", "「", "」", "（", "）", "。"),
-            array("", ",", ":", ";", "!", "?", "｢", "｣", "(", ")", "."),
+            array(" ", "，", "：", "；", "！", "？", "「", "」", "（", "）", "。", "❤"),
+            array("", ",", ":", ";", "!", "?", "｢", "｣", "(", ")", ".", "♥"),
             $lowStr);
     }
 }
